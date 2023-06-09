@@ -1,0 +1,20 @@
+{
+	"projects": [
+		{"name": "E-Commerce Innova Inc Soluciones", "href": "innova.png", "link": "https://innovainc.co/home"},
+		{"name": "Tienda Virtual Bala Bike", "href": "bala.png", "link": ""},
+		{"name": "Tienda Virtual Brunette Girl Extensiones", "href": "brunette.png", "link": ""},
+		{"name": "Lejac | Servicios Juridicos Inmobiliarios y Financieros", "href": "lejac.png", "link": ""},
+		{"name": "Clone de inicio de Netflix", "href": "netflix.png", "link": ""}
+	],
+	"skills": [
+		{"name": "html5", "href":"html5.png"},
+		{"name": "css", "href":"css.png"},
+		{"name": "js", "href":"js.png"},
+		{"name": "vue", "href":"vue.png"},
+		{"name": "bootstrap", "href":"bootstrap.png"},
+		{"name": "php", "href":"php.png"},
+		{"name": "laravel", "href":"laravel.png"},
+		{"name": "mysql", "href":"mysql.png"},
+		{"name": "github", "href":"github.png"}
+	]
+}

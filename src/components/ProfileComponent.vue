@@ -4,7 +4,7 @@
         <div class="foto-perfil-contenedor">
             <h1 class="foto-perfil-texto">Hola!</h1>
             <figure class="foto-perfil-img">
-                <img src="/assets/perfil.png" alt="Foto de Odannys De La Cruz | Frontend web developer">
+                <img src="/assets/images/perfil.png" alt="Foto de Odannys De La Cruz | Frontend web developer">
             </figure>  
             <button class="foto-perfil-button">
                 <a class="foto-perfil-link" href="portafolio.html">VER PORTAFOLIO &#62;</a>
@@ -27,8 +27,8 @@ export default {
 <style scoped>
 .foto-perfil {
     background: var(--principal-color);
-    height: 80vh;
-    max-height: 900px;
+    height: auto;
+    padding-bottom: 40px;
     display: flex;
     justify-content: center;
     top: 0;
@@ -39,7 +39,7 @@ export default {
     flex-direction: column;
     position: relative;
     padding: 20px;
-    margin-top: 130px;
+    margin-top: 100px;
 }
 .foto-perfil-texto {
     position: absolute;
@@ -99,6 +99,7 @@ export default {
 @media (min-width: 768px) {
     .foto-perfil {
         height: 100vh;
+        max-height: 900px;
     }
 }
 @media (min-width: 992px) {

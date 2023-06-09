@@ -71,6 +71,7 @@
 	color: #fff;
 	text-decoration: underline;
 }
+
 @media (min-width: 576px) {
 	.header-nav-ul {
 		justify-content: space-around;

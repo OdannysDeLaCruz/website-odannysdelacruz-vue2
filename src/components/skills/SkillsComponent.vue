@@ -1,15 +1,15 @@
 <template>
 	<section class="main-contenedor-fluid" id="skills">
-		<section class="main-contenedor content-skill">
+		<section class="main-contenedor content-skill content">
 			<article class="content-skill-introduction">
-				<h1 class="content-skill-title">Skills & <br> Experience</h1>
-				<p class="content-skill-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum itaque, labore, impedit voluptates corporis accusamus ab. Delectus, saepe! Similique id possimus numquam veniam magnam repellat hic, maiores praesentium, amet reprehenderit?</p>
+				<h1 class="subtitle">Skills</h1>
+				<p class="paragraph text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum itaque, labore, impedit voluptates corporis accusamus ab. Delectus, saepe! Similique id possimus numquam veniam magnam repellat hic, maiores praesentium, amet reprehenderit?</p>
 			</article>
 			<div class="content-skill-tech">
 				<card-skill-component 
-					v-for="(logo, index in logos"
+					v-for="(skill, index) in skills"
 					:key="index"
-					:img="logo">
+					:img="skill.href">
 				</card-skill-component>
 			</div>
 		</section>
@@ -17,58 +17,49 @@
 </template>
 <script>
 import CardSkillComponent from "@/components/skills/CardSkillComponent"
+import api from "@/api"
 export default {
 	name: 'SkillsComponent',
 	data() {
 		return {
-			logos: [
-				'html5.png',
-				'css.png',
-				'js.png',
-				'vue.png',
-				'bootstrap.png',
-				'php.png',
-				'laravel.png',
-				'mysql.png',
-				'github.png',
-			]
+			skills: []
 		}
 	},
-	components: { CardSkillComponent }
+	components: { CardSkillComponent },
+	created() {
+		api.getSkills()
+		.then(data => this.skills = data)
+	}
 }
 </script>
 <style scoped>
 .main-contenedor-fluid {
 	background: #fff;
 }
-.content-skill {
-	padding: 30px;
-	max-width: 1200px;
-	margin: auto;
-}
 .content-skill-introduction {
 	text-align: justify;
 }
-.content-skill-title {
-	font-size: 6.0rem;
-	font-weight: 800;
-	text-align: center;
-	line-height: 60px;
-	margin: 30px 0 60px;
-}
-.content-skill-paragraph {
-	font-size: 1.8rem;
-	margin-bottom: 60px;
-}
 .content-skill-tech {
+	margin-top: 40px;
 	display: grid;
 	grid-gap: 10px;
 	grid-template-columns: 1fr 1fr;
-	/*display: flex;*/
-	/*justify-content: center;*/
-	/*flex-wrap: wrap;*/
+	grid-template-rows: 1fr;
+	transition: ease all .4s;
+}
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+	.content-skill-tech {
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
 @media (min-width: 768px) {
+	.content-skill-tech {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
 	.content-skill-tech {
 		grid-template-columns: repeat(5, 1fr);
 	}

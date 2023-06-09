@@ -4,6 +4,7 @@
 			<profile-component></profile-component>
 			<resumen-component></resumen-component>
 		</section>
+		<projects-list></projects-list>
 		<skills-component></skills-component>
 	</div>
 </template>
@@ -12,11 +13,13 @@
 import ProfileComponent from '@/components/ProfileComponent'
 import ResumenComponent from '@/components/ResumenComponent'
 import SkillsComponent from '@/components/skills/SkillsComponent'
+import ProjectsList from '@/components/projects/ProjectsList'
 export default {
   	name: 'Home',
   	components: {
   		ProfileComponent,
   		ResumenComponent,
+  		ProjectsList,
   		SkillsComponent
   	}
 }
@@ -31,6 +34,5 @@ export default {
 	.content-resumen {
 		grid-template-columns: 2fr 3fr;
 	}
-
 }
 </style>

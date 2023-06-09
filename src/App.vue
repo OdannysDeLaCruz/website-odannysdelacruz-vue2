@@ -32,6 +32,10 @@ a {
 	--principal-color: #003380;
 	--bg-color: #f9f9f9;
 }
+h1, h2, h3, h4, h5,
+p, article, img {
+	transition: all ease .4s;
+}
 body {
 	background: var(--bg-color);
 }
@@ -49,5 +53,37 @@ main {
 	width: 100%;
 	max-width: 1800px;
 	margin: auto;
+}
+.subtitle {
+	font-size: 4.0rem;
+	font-weight: 800;
+	text-align: center;
+	margin: 0px 0 30px;
+	line-height: 40px;
+    color: var(--text-color);
+}
+.paragraph {
+	font-size: 1.8rem;
+	margin-bottom: 30px;
+    line-height: calc(1.9rem * 1.6);
+    font-weight: 300;
+    color: var(--text-color);
+}
+.text-center {
+    text-align: center;
+}
+.text-justify {
+	text-align: justify;
+}
+.content {
+	padding: 40px 30px;
+	max-width: 1200px;
+	margin: auto;
+}
+@media (min-width: 768px) {
+	.subtitle {
+		font-size: 6.0rem;
+		line-height: 60px;
+	}
 }
 </style>

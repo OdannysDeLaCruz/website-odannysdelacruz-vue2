@@ -1,6 +1,6 @@
 <template>
 	<div class="skill-card">
-		<img class="skill-card-img" :src="'/assets/'+img" alt="">
+		<img class="skill-card-img" :src="'/assets/images/'+img" alt="">
 	</div>
 </template>
 <script>
@@ -12,14 +12,20 @@
 <style scoped>
 .skill-card {
 	background: #fff;
-	padding: 10px;
+	padding: 15px;
 	border-radius: 10px;
 	border: 1px solid var(--principal-color);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+	height: 100px;
+	transition: all ease .4s;
 }
 .skill-card-img {
-	width: 100px;
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+	transition: ease all .4s;
 }
 </style>
